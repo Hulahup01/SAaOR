@@ -25,7 +25,17 @@ def solve(param_P, param_Q, param_A):
   
     print(f"B:\n{B}\n")
     print(f"C:\n{C}\n")
+    
+    max_value = B[0, 0]
+    max_coords = (0, 0)
+   
+    for i in range(B.shape[0]): 
+        for j in range(B.shape[1]):
+            if B[i, j] > max_value:
+                max_value = B[i, j]
+                max_coords = (i, j)
 
+    print(f"Максимальная прибыль B{max_coords} = {max_value}")
             
 
 if __name__ == "__main__":

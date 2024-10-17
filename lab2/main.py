@@ -123,9 +123,9 @@ def solve(param_c, param_A, param_b):
             constraint.append(f"{l_p_f}*X{len(x_B) + p + 1}")
 
         print("========[Результат]========")
-        print(f"Отсекающее ограничение Гомори:\n{ " + ".join(constraint)} - s = {x_bar_i}\n")
+        print(f"Отсекающее ограничение Гомори:\n{ ' + '.join(constraint)} - s = {x_bar_i - np.floor(x_bar_i)}\n")
         print(f"Вектор коэффициентов при переменных:\n{constraint_c}\n")
-        print(f"Свободный член:\n{x_bar_i}\n")
+        print(f"Свободный член:\n{x_bar_i - np.floor(x_bar_i)}\n")
             
 
 if __name__ == "__main__":
